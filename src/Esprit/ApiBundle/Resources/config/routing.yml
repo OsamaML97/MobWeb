@@ -1,0 +1,62 @@
+esprit_api_homepage:
+    path:     /
+    defaults: { _controller: EspritApiBundle:Default:index }
+
+all:
+    path:     /enfants/all
+    defaults: { _controller: EspritApiBundle:Enfant:all }
+
+find_task:
+    path:     /enfants/find/{id}
+    defaults: { _controller: EspritApiBundle:Enfant:find}
+
+find_enf:
+    path:     /enfants/findE/{nom}
+    defaults: { _controller: EspritApiBundle:Enfant:findNom}
+
+create_task:
+    path:     /enfants/new
+    defaults: { _controller: EspritApiBundle:Enfant:new}
+
+all2:
+    path:     /events/all
+    defaults: { _controller: EspritApiBundle:Event:all }
+
+find_task2:
+    path:     /events/find/{id}
+    defaults: { _controller: EspritApiBundle:Event:find}
+
+find_event:
+    path:     /events/findEv/{evMonth}
+    defaults: { _controller: EspritApiBundle:Event:findMonth}
+
+
+
+create_task2:
+    path:     /events/new
+    defaults: { _controller: EspritApiBundle:Event:new}
+
+all3:
+    path:     /user/all
+    defaults: { _controller: EspritApiBundle:User:all }
+
+find_user:
+    path:     /user/find/{username}
+    defaults: { _controller: EspritApiBundle:User:findByUsername}
+
+log:
+    path:     /user/login
+    defaults: { _controller: EspritApiBundle:User:login}
+
+create_task3:
+    path:     /user/new
+    defaults: { _controller: EspritApiBundle:User:new}
+
+delete_enfant:
+    path:     /enfants/delete/{id}
+    defaults: { _controller: EspritApiBundle:Enfant:supprimerEnfant}
+
+delete_event:
+    path:     /event/delete/{id}
+    defaults: { _controller: EspritApiBundle:Event:supprimerEvent}
+
